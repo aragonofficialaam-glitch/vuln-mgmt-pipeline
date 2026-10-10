@@ -1,0 +1,8 @@
+asset_id,asset_name,asset_type,environment,ip_or_identifier,os_or_platform,exposure,owner,scanner,notes
+A-001,Metasploitable2,host,lab,192.168.56.101,Linux (Ubuntu 8.04),host-only,Aragon,Greenbone,Intentionally vulnerable target; isolated host-only network; no internet access
+A-002,Kali Linux,host,lab,192.168.56.102,Linux (Kali),host-only,Aragon,N/A,Scanner workstation; runs Greenbone/Trivy/Docker
+A-003,AWS Account - Hello World,cloud_account,cloud,us-east-2,AWS,internet,Aragon,Prowler,Member account under own Organization; $20 spend limit; single region enabled
+A-004,python:3.6,container_image,lab,python:3.6,Debian-based,n/a,Aragon,Trivy,Deliberately outdated image; ~16795 findings (321 critical)
+A-005,nginx:1.14,container_image,lab,nginx:1.14,Debian 9 (EOL),n/a,Aragon,Trivy,Deliberately outdated image; ~217 findings (31 critical); base OS end-of-life
+A-006,SG ssh-open,cloud_resource,cloud,sg-EXAMPLE1,AWS Security Group,internet,Aragon,Prowler,Intentional misconfig: SSH 0.0.0.0/0; no instances attached
+A-007,vulnlab-no-mfa-user,cloud_resource,cloud,IAM user,AWS IAM,internet,Aragon,Prowler,Intentional misconfig: IAM user without MFA; 2 active access 2ANTS

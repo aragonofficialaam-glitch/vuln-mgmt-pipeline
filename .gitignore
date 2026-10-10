@@ -1,0 +1,83 @@
+# =========================
+# Secrets & credentials
+# =========================
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+credentials
+credentials.json
+.aws/
+*secret*
+*token*
+!**/*token*.py
+
+# =========================
+# Python
+# =========================
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+env/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# =========================
+# Databases (local data stays local)
+# =========================
+*.db
+*.sqlite
+*.sqlite3
+db/data/
+
+# =========================
+# Raw scan output (may be large / contain lab details)
+# Only sanitized samples in data/samples/ are committed
+# =========================
+data/raw/*
+!data/raw/.gitkeep
+scanners/**/output/
+*.nessus
+reports/tmp/
+
+# =========================
+# Virtual machine images (never commit)
+# =========================
+*.ova
+*.ovf
+*.vdi
+*.vmdk
+*.vhd
+*.vhdx
+*.iso
+*.qcow2
+
+# =========================
+# Prowler / Trivy caches
+# =========================
+.trivycache/
+prowler-output/
+
+# =========================
+# Power BI temp files (the .pbix itself IS committed)
+# =========================
+~$*.pbix
+*.pbix.bak
+
+# =========================
+# IDE / OS
+# =========================
+.vscode/
+.idea/
+*.swp
+.DS_Store
+Thumbs.db
+desktop.ini
